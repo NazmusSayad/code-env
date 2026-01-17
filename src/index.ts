@@ -4,13 +4,13 @@ import { IDE_TYPES } from './ide-types'
 export function activate() {
   const { appName, uriScheme } = vscode.env
   console.log(`App Name: "${appName}", URI Scheme: "${uriScheme}"`)
-  setContext('code-env.app', appName)
-  setContext('code-env.uri', uriScheme)
+  setContext('app', appName)
+  setContext('uri', uriScheme)
 
   const version = vscode.version
   const versionNum = parseFloat(version)
   console.log(`IDE Version: "${version}", Parsed: ${versionNum}`)
-  setContext('code-env.version', versionNum)
+  setContext('version', versionNum)
 
   const env = IDE_TYPES.find((ide) => {
     const appNameMatch =
@@ -28,16 +28,16 @@ export function activate() {
 
   if (!env) {
     console.error('Unable to determine IDE environment')
-    setContext('code-env.unsupported', true)
+    setContext('unsupported', true)
     return
   }
 
   console.log(`Detected IDE: "${env.key}", Name: "${env.name}"`)
-  setContext('code-env', env.name)
-  setContext(`code-env.${env.key}`, true)
+  setContext('name', env.name)
+  setContext(env.key, true)
 }
 
 function setContext(key: string, value: string | boolean | number) {
   console.log(`Setting context: ${key} = ${value}`)
-  vscode.commands.executeCommand('setContext', key, value)
+  vscode.commands.executeCommand('setContext', `editor.${key}`, value)
 }

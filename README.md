@@ -1,4 +1,4 @@
-# Code Env
+# Editor Env
 
 A VS Code extension that automatically detects and exposes your IDE environment information as context variables. Perfect for creating cross-editor compatible extensions and configurations.
 
@@ -7,7 +7,7 @@ A VS Code extension that automatically detects and exposes your IDE environment 
 - **Automatic IDE Detection**: Identifies which VS Code-based editor you're using (VSCode, Cursor, Windsurf, VSCodium, Trae, Kiro, Antigravity, and more)
 - **Version Detection**: Provides IDE version information for version-specific configurations
 - **URI Scheme Support**: Exposes the IDE's URI scheme for deep linking and protocol handling
-- **Context Variables**: Sets `code-env` context variables that can be used in:
+- **Context Variables**: Sets `editor` context variables that can be used in:
   - Keybindings (`when` clauses)
   - Settings configurations
   - Extension conditions
@@ -28,12 +28,12 @@ A VS Code extension that automatically detects and exposes your IDE environment 
 
 Once installed, the extension automatically sets context variables based on your detected IDE:
 
-- `code-env` - The name of the detected IDE (e.g., "VSCode", "Cursor")
-- `code-env.app` - The full application name
-- `code-env.uri` - The URI scheme used by the IDE
-- `code-env.version` - The IDE version number (e.g., "1.60")
-- `code-env.${ideKey}` - Set to `true` for the specific IDE (e.g., `code-env.cursor`, `code-env.windsurf`)
-- `code-env.unsupported` - Set to `true` if the IDE is not recognized
+- `editor.name` - The name of the detected IDE (e.g., "VSCode", "Cursor")
+- `editor.app` - The full application name
+- `editor.uri` - The URI scheme used by the IDE
+- `editor.version` - The IDE version number (e.g., "1.60")
+- `editor.${ideKey}` - Set to `true` for the specific IDE (e.g., `editor.cursor`, `editor.windsurf`)
+- `editor.unsupported` - Set to `true` if the IDE is not recognized
 
 ### Example: Conditional Keybindings
 
@@ -41,7 +41,7 @@ Once installed, the extension automatically sets context variables based on your
 {
   "key": "ctrl+shift+p",
   "command": "cursor.command",
-  "when": "code-env.cursor"
+  "when": "editor.cursor"
 }
 ```
 
@@ -51,7 +51,7 @@ Once installed, the extension automatically sets context variables based on your
 {
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "when": "code-env.vscode"
+    "when": "editor.vscode"
   }
 }
 ```
