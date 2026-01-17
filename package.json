@@ -1,9 +1,9 @@
 {
-  "name": "editor-env",
+  "name": "editor-context",
   "version": "1.0.0",
   "icon": "public/icon.png",
   "publisher": "NazmusSayad",
-  "displayName": "Editor Env",
+  "displayName": "Editor Context",
   "description": "A VS Code extension that automatically detects your IDE environment and exposes it as context variables for cross-editor compatible configurations and keybindings.",
   "scripts": {
     "lint": "eslint ./src",
@@ -43,6 +43,7 @@
   "keywords": [
     "code-env",
     "editor-env",
+    "editor-context",
     "ide-detection",
     "context-variables",
     "keybindings",
@@ -57,6 +58,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/NazmusSayad/vscode.editor-env.git"
+    "url": "https://github.com/NazmusSayad/vscode.editor-context.git"
   }
 }

@@ -2,14 +2,17 @@ import * as vscode from 'vscode'
 import { IDE_TYPES } from './ide-types'
 
 export function activate() {
-  const { appName, uriScheme } = vscode.env
-  console.log(`App Name: "${appName}", URI Scheme: "${uriScheme}"`)
-  setContext('app', appName)
-  setContext('uri', uriScheme)
+  const appName = vscode.env.appName
+  const uriScheme = vscode.env.uriScheme
 
   const version = vscode.version
   const versionNum = parseFloat(version)
+
+  console.log(`App Name: "${appName}", URI Scheme: "${uriScheme}"`)
   console.log(`IDE Version: "${version}", Parsed: ${versionNum}`)
+
+  setContext('app', appName)
+  setContext('uri', uriScheme)
   setContext('version', versionNum)
 
   const env = IDE_TYPES.find((ide) => {
@@ -32,9 +35,8 @@ export function activate() {
     return
   }
 
-  console.log(`Detected IDE: "${env.key}", Name: "${env.name}"`)
-  setContext('name', env.name)
-  setContext(env.key, true)
+  console.log(`Detected IDE: "${env.keys.join(', ')}"`)
+  env.keys.forEach((key) => setContext(key, true))
 }
 
 function setContext(key: string, value: string | boolean | number) {

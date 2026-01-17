@@ -1,6 +1,5 @@
 type IdeTypeObject = {
-  key: string
-  name: string
+  keys: string[]
   matcher: {
     appName: string | RegExp
     uriScheme: string | RegExp
@@ -9,16 +8,14 @@ type IdeTypeObject = {
 
 export const IDE_TYPES: IdeTypeObject[] = [
   {
-    key: 'vscode',
-    name: 'VSCode',
+    keys: ['vscode', 'vscodeStable'],
     matcher: {
       appName: 'Visual Studio Code',
       uriScheme: 'vscode',
     },
   },
   {
-    key: 'vscodeInsiders',
-    name: 'VSCode',
+    keys: ['vscode', 'vscodeInsiders'],
     matcher: {
       appName: 'Visual Studio Code - Insiders',
       uriScheme: 'vscode-insiders',
@@ -26,8 +23,7 @@ export const IDE_TYPES: IdeTypeObject[] = [
   },
 
   {
-    key: 'vscodium',
-    name: 'VSCodium',
+    keys: ['vscodium'],
     matcher: {
       appName: 'VSCodium',
       uriScheme: 'vscodium',
@@ -35,8 +31,7 @@ export const IDE_TYPES: IdeTypeObject[] = [
   },
 
   {
-    key: 'cursor',
-    name: 'Cursor',
+    keys: ['cursor'],
     matcher: {
       appName: 'Cursor',
       uriScheme: 'cursor',
@@ -44,8 +39,7 @@ export const IDE_TYPES: IdeTypeObject[] = [
   },
 
   {
-    key: 'windsurf',
-    name: 'Windsurf',
+    keys: ['windsurf'],
     matcher: {
       appName: 'Windsurf',
       uriScheme: 'windsurf',
@@ -53,8 +47,7 @@ export const IDE_TYPES: IdeTypeObject[] = [
   },
 
   {
-    key: 'antigravity',
-    name: 'Antigravity',
+    keys: ['antigravity'],
     matcher: {
       appName: 'Antigravity',
       uriScheme: 'antigravity',
@@ -62,8 +55,7 @@ export const IDE_TYPES: IdeTypeObject[] = [
   },
 
   {
-    key: 'trae',
-    name: 'Trae',
+    keys: ['trae'],
     matcher: {
       appName: 'Trae',
       uriScheme: 'trae',
@@ -71,8 +63,7 @@ export const IDE_TYPES: IdeTypeObject[] = [
   },
 
   {
-    key: 'kiro',
-    name: 'Kiro',
+    keys: ['kiro'],
     matcher: {
       appName: 'Kiro',
       uriScheme: 'kiro',

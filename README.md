@@ -1,4 +1,4 @@
-# Editor Env
+# Editor Context
 
 A VS Code extension that automatically detects and exposes your IDE environment information as context variables. Perfect for creating cross-editor compatible extensions and configurations.
 
@@ -28,11 +28,10 @@ A VS Code extension that automatically detects and exposes your IDE environment 
 
 Once installed, the extension automatically sets context variables based on your detected IDE:
 
-- `editor.name` - The name of the detected IDE (e.g., "VSCode", "Cursor")
 - `editor.app` - The full application name
 - `editor.uri` - The URI scheme used by the IDE
-- `editor.version` - The IDE version number (e.g., "1.60")
-- `editor.${ideKey}` - Set to `true` for the specific IDE (e.g., `editor.cursor`, `editor.windsurf`)
+- `editor.version` - The IDE version number (e.g., 1.60)
+- `editor.${key}` - Set to `true` for the specific IDE (e.g., `editor.cursor`, `editor.windsurf`)
 - `editor.unsupported` - Set to `true` if the IDE is not recognized
 
 ### Example: Conditional Keybindings
@@ -55,6 +54,8 @@ Once installed, the extension automatically sets context variables based on your
   }
 }
 ```
+
+## Docs
 
 ## License
 
