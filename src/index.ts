@@ -4,8 +4,8 @@ import { IDE_TYPES } from './ide-types'
 export function activate() {
   const { appName, uriScheme } = vscode.env
   console.log(`App Name: "${appName}", URI Scheme: "${uriScheme}"`)
-  setContext('code-env.appName', appName)
-  setContext(`code-env.${uriScheme}`, uriScheme)
+  setContext('code-env.app', appName)
+  setContext('code-env.uri', uriScheme)
 
   const version = vscode.version
   const versionNum = parseFloat(version)

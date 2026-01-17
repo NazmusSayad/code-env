@@ -36,13 +36,26 @@
     "vscode": "^1.90.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Keymaps",
+    "Extension Packs"
   ],
   "keywords": [
-    "code-env"
+    "code-env",
+    "ide-detection",
+    "context-variables",
+    "keybindings",
+    "cross-editor",
+    "vscode",
+    "cursor",
+    "windsurf",
+    "vscodium",
+    "environment",
+    "conditional-settings",
+    "when-clause"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NazmusSayad/vscode.code-env.git"
+    "url": "https://github.com/NazmusSayad/vscode.code-env.git"
   }
 }
