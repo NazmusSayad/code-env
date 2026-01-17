@@ -1,0 +1,9 @@
+**/*
+
+!dist/**
+!public/**
+
+!LICENSE
+!README.md
+!CHANGELOG.md
+!package.json
