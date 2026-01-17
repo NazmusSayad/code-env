@@ -34,6 +34,9 @@ Once installed, the extension automatically sets context variables based on your
 - `editor.${key}` - Set to `true` for the specific IDE (e.g., `editor.cursor`, `editor.windsurf`)
 - `editor.unsupported` - Set to `true` if the IDE is not recognized
 
+<img width="1332" height="487" alt="image" src="https://github.com/user-attachments/assets/21991f90-4f80-4a19-8714-1f038734ed74" />
+
+
 ### Example: Conditional Keybindings
 
 ```json
