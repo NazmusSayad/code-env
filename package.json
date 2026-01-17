@@ -4,7 +4,7 @@
   "icon": "public/icon.png",
   "publisher": "NazmusSayad",
   "displayName": "Code Env",
-  "description": "Code Env is a extension that helps you to code in a better way.",
+  "description": "A VS Code extension that automatically detects your IDE environment and exposes it as context variables for cross-editor compatible configurations and keybindings.",
   "scripts": {
     "lint": "eslint ./src",
     "check-types": "tsc --noEmit",
