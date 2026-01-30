@@ -57,9 +57,3 @@ Once installed, the extension automatically sets context variables based on your
   }
 }
 ```
-
-## Docs
-
-## License
-
-MIT
